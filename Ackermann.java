@@ -15,7 +15,7 @@ public class Ackermann {
 	}
 	
 	public static void main(String[] args) {
-		int m=3;
+		int m=4;
 		int n=3;
 		System.out.println("ack("+m+","+n+") = "+ack(m,n));					
 	}

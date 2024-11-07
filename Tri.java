@@ -48,9 +48,19 @@ public class Tri {
 	/* Sous-fonction (récursive) pour le tri fusion
 	 * Trie le sous-tableau t[debut]..t[fin]
 	 */
-	private static void triFusion(int[] t, int debut, int fin){
-		//A FAIRE
-	}
+	private static void triFusion(int[] t, int debut, int fin) {
+        if (debut < fin) {
+            // Calcul de l'indice du milieu
+            int milieu = (debut + fin) / 2;
+
+            // Appel récursif pour trier les deux sous-tableaux
+            triFusion(t, debut, milieu);
+            triFusion(t, milieu + 1, fin);
+
+            // Fusionner les deux sous-tableaux triés
+            fusionner(t, debut, milieu, fin);
+        }
+    }
 
 	/* Sous-fonction pour le tri fusion
 	 * Suppose que, dans le tableau t, 

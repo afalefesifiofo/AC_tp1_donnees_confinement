@@ -35,9 +35,9 @@ public class Mesure_Tri {
 		
 		//A FAIRE : adapter les 3 valeurs suivantes pour avoir des mesures significatives
 		// surtout la valeurs de la variable taille_fin
-		int taille_init = 20;
-		int taille_fin  = 100000;
-		int nbrMesures = 70;
+		int taille_init = 5;
+		int taille_fin  = 100000000;
+		int nbrMesures = 400;
 		
 		int taille_incr = (taille_fin-taille_init)/(nbrMesures-1);
 
@@ -46,15 +46,21 @@ public class Mesure_Tri {
 		for(int n = taille_init; n<taille_fin; n=n+taille_incr){			  
 			tab_tailles.add(n); //on sauvegarde la taille
 			
-			
+			 
 			int[] test = new int[n];
 			for (int k = 0; k < n; k++) {
-				test[k] = n - k; // Valori decrescenti da n a 1
+				//test[k]=(int) (Math.random()*100); // medium case
+				//test[k] = n - k; // Valori decrescenti da n a 1: worst case
+				test[k]=k; //best case
 			}
-
+			
+			
 
 			long date1 = System.currentTimeMillis(); //on lance le chrono
+			
+			//Tri.triFusion(test);
 			test=Tri.triInsertion(test); //on trie le tableau 
+			
 			long date2 = System.currentTimeMillis(); //on arrête le chrono
 			tab_temps.add((int)(date2 - date1)); //on sauvegarde le temps
 			System.out.println("Temps de calcul pour n="+n+" : "+ tab_temps.get(tab_temps.size()-1)+" millisecondes.");
@@ -76,8 +82,8 @@ public class Mesure_Tri {
 			if (in.hasNextDouble()) {
 				a = in.nextDouble();
 				//g.addLine(a);
-				g.addQuadratic(a);
-				// g.addnLogn(a);
+				//g.addQuadratic(a);
+				 g.addnLogn(a);
 			}
 			else
 				System.out.println(in.next()+" n'a pas été reconnu comme un double.");

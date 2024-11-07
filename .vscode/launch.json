@@ -1,0 +1,45 @@
+{
+    // Usare IntelliSense per informazioni sui possibili attributi.
+    // Al passaggio del mouse vengono visualizzate le descrizioni degli attributi esistenti.
+    // Per altre informazioni, visitare: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}",
+            "vmArgs": "-Xss1m"
+
+        },
+        {
+            "type": "java",
+            "name": "Ackermann",
+            "request": "launch",
+            "mainClass": "Ackermann",
+            "projectName": "AC_tp1_donnees_confinement_94bd435"
+        },
+        {
+            "type": "java",
+            "name": "Mesure_Tri",
+            "request": "launch",
+            "mainClass": "Mesure_Tri",
+            "projectName": "AC_tp1_donnees_confinement_94bd435"
+        },
+        {
+            "type": "java",
+            "name": "Permutations",
+            "request": "launch",
+            "mainClass": "Permutations",
+            "projectName": "AC_tp1_donnees_confinement_94bd435"
+        },
+        {
+            "type": "java",
+            "name": "Tri",
+            "request": "launch",
+            "mainClass": "Tri",
+            "projectName": "AC_tp1_donnees_confinement_94bd435"
+        }
+    ]
+}
